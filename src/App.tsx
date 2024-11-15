@@ -3,6 +3,7 @@ import FormComponent from "./components/FormComponent";
 import SubmittedDetailsComponent from "./components/SubmittedDetailsComponent";
 import { initialValues } from "./hooks/useFormikForm";
 import ConfirmationComponent from "./components/ConfirmationComponent";
+import React from "react";
 
 function App() {
   const [submittedData, setSubmittedData] = useState<

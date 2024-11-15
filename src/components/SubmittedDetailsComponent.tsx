@@ -1,3 +1,5 @@
+import React from "react";
+
 type SubmittedDetailsProps = {
   data: {
     firstName: string;

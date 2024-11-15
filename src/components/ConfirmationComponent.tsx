@@ -1,3 +1,5 @@
+import React from "react";
+
 function ConfirmationComponent({ isSubmitted }: { isSubmitted: boolean }) {
   return (
     <div className="flex  justify-center m-2" aria-live="polite">
