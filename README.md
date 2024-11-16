@@ -1,5 +1,5 @@
 ### ADA-COMPLIANT CONTACT FORM
-This project is a responsive, ADA-compliant web application that allows users to input their personal information, select their country of birth from a dynamically populated dropdown, and view a confirmation message upon submission. It was built as a time-limited challenge, focusing on clean code, accessibility, and user-friendliness.
+This project is a responsive, ADA-compliant web application that allows users to input their personal information, select their country of birth from a dynamically populated dropdown, and view a confirmation message upon submission. It was built focusing on clean code, accessibility, and user-friendliness.
 
 ## Features
 **Responsive Design**: The layout is optimized for both desktop and mobile screens using Tailwind CSS.
@@ -29,7 +29,7 @@ This project is a responsive, ADA-compliant web application that allows users to
    
 5. **Start the development server**
 
-   npm start
+   npm run dev
 
 ## My Approach
 
@@ -38,8 +38,8 @@ This project is a responsive, ADA-compliant web application that allows users to
  Used Tailwind CSS for rapid and responsive UI development. Tailwind provides utility-first classes, ensuring a consistent design across all devices with minimal custom CSS.
 
 **Data Fetching**
-Axios was used for API calls within a custom hook useGetCountriesData.
-Axios simplifies HTTP requests with built-in error handling and a cleaner syntax compared to Fetch.
+Used Axios for API calls within a custom hook useGetCountriesData.
+Axios simplifies HTTP requests with built-in error handling and a cleaner syntax.
 
 **Form Validation**
 Formik was paired with Yup for form state management and schema-based validation.
@@ -51,10 +51,9 @@ These libraries integrate seamlessly with React, reducing boilerplate and enhanc
  
 **Error Handling**
  Implemented error states for API calls and form validation feedback.
- A user-friendly application must gracefully handle failures and provide clear feedback.
 
 # Challenges Faced
 1. Time Constraints
-The project was developed within a limited time as I saw email a little bit later in the day, necessitating efficient decision-making and prioritization.
+The project was developed within a limited time as I saw the email a little bit later in the day, necessitating efficient decision-making and prioritization.
 2. ADA Compliance
 Ensuring compliance required thorough testing.
