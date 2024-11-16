@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useFormikForm } from "../hooks/useFormikForm";
 import CustomError from "./CustomErrorComponent";
 import { useGetCountriesData } from "../hooks/useGetCountriesData";
@@ -9,6 +9,13 @@ const FormComponent: React.FC<{ onSubmitCallback: (values: any) => void }> = ({
 }) => {
   const { formik } = useFormikForm(onSubmitCallback);
   const { countries, loading, error } = useGetCountriesData();
+  const firstNameInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (firstNameInputRef.current) {
+      firstNameInputRef.current.focus();
+    }
+  });
 
   return (
     <div className="flex  justify-center">
@@ -25,6 +32,7 @@ const FormComponent: React.FC<{ onSubmitCallback: (values: any) => void }> = ({
                 First Name
               </label>
               <input
+                ref={firstNameInputRef}
                 type="text"
                 id="firstName"
                 name="firstName"
