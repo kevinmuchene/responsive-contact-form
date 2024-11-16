@@ -1,51 +1,57 @@
-# responsive-contact-form
-# React + TypeScript + Vite
+### CONTACT FORM
+This project is a responsive, ADA-compliant web application that allows users to input their personal information, select their country of birth from a dynamically populated dropdown, and view a confirmation message upon submission. It was built as a time-limited challenge, focusing on clean code, accessibility, and user-friendliness.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+**Responsive Design**: The layout is optimized for both desktop and mobile screens using Tailwind CSS.
 
-Currently, two official plugins are available:
+**Dynamic Data Fetching**: The country dropdown is populated using the REST Countries API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Form Validation**: Uses Formik and Yup for robust validation of user inputs.
 
-## Expanding the ESLint configuration
+**Accessibility**: Fully adheres to WCAG 2.1 guidelines for color contrast, keyboard navigation, and screen reader compatibility.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Error Handling**: Gracefully manages API errors and provides feedback to users.
 
-- Configure the top-level `parserOptions` property like this:
+**Modern Stack**: Built with React, TypeScript, Axios, Formik, Yup, and Tailwind CSS for styling.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. **Clone the Respository**
+   
+   git clone https://github.com/kevinmuchene/responsive-contact-form
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   cd responsive-contact-form
+   
+3. **Install Dependencies**
+   Ensure you have Node.js installed, then run:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   npm install
+   
+5. **Start the development server**
+
+   npm start
+
+## My Approach
+
+**UI and Responsiveness**
+
+ Used Tailwind CSS for rapid and responsive UI development. Tailwind provides utility-first classes, ensuring a consistent design across all devices with minimal custom CSS.
+
+**Data Fetching**
+Decision: Axios was used for API calls within a custom hook useGetCountriesData.
+Reasoning: Axios simplifies HTTP requests with built-in error handling and a cleaner syntax compared to Fetch.
+**Form Validation**
+ Formik was paired with Yup for form state management and schema-based validation.
+These libraries integrate seamlessly with React, reducing boilerplate and enhancing validation capabilities.
+**Accessibility**
+ Ensured all inputs are labeled correctly, and the form is navigable via keyboard.
+ Accessibility is critical for compliance with WCAG 2.1 and creating an inclusive user experience.
+**Error Handling**
+ Implemented error states for API calls and form validation feedback.
+ A user-friendly application must gracefully handle failures and provide clear feedback.
+
+# Challenges Faced
+1. Time Constraints
+The project was developed within a limited time as I saw email a little bit later in the day, necessitating efficient decision-making and prioritization.
+2. ADA Compliance
+Ensuring compliance required thorough testing, particularly for color contrast and keyboard navigation.
