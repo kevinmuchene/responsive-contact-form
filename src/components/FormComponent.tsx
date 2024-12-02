@@ -15,7 +15,7 @@ const FormComponent: React.FC<{ onSubmitCallback: (values: any) => void }> = ({
     if (firstNameInputRef.current) {
       firstNameInputRef.current.focus();
     }
-  });
+  },[]);
 
   return (
     <div className="flex  justify-center">
